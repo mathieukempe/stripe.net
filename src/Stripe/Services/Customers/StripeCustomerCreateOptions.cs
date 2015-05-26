@@ -46,5 +46,8 @@ namespace Stripe
                 return EpochTime.ConvertDateTimeToEpoch(TrialEnd.Value);
             }
         }
+
+        [JsonProperty("source")]
+        public string Source { get; set; }
     }
 }

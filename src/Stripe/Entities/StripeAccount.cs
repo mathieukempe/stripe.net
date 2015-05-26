@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Stripe.Entities;
 
 namespace Stripe
 {
@@ -36,5 +37,31 @@ namespace Stripe
 
         [JsonProperty("timezone")]
         public string Timezone { get; set; }
+
+        [JsonProperty("managed")]
+        public string Managed { get; set; }
+
+        [JsonProperty("bank_accounts")]
+        public StripeList<StripeRecipientActiveAccount> BankAccounts { get; set; }
+
+        [JsonProperty("legal_entity")]
+        public StripeLegalEntity LegalEntity { get; set; }
+
+        [JsonProperty("transfer_schedule")]
+        public StripeTransferScheduleEntity TransferSchedule { get; set; }
+
+        [JsonProperty("tos_acceptance")]
+        public StripeTosAcceptanceEntity TosAcceptance { get; set; }
+
+        [JsonProperty("debit_negative_balances")]
+        public bool DebitNegativeBalances { get; set; }
+
+        [JsonProperty("business_name")]
+        public string BusinessName { get; set; }
+
+        [JsonProperty("verification")]
+        public StripeVerification Verification { get; set; }
+
+
     }
 }

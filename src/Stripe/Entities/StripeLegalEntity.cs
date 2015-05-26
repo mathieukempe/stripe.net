@@ -1,0 +1,35 @@
+﻿using Newtonsoft.Json;
+using Stripe.Entities;
+
+namespace Stripe
+{
+    public class StripeLegalEntity
+    {
+        [JsonProperty("type")]
+        public string Type { get; set; }
+
+        [JsonProperty("business_name")]
+        public string BusinessName { get; set; }
+
+        [JsonProperty("first_name")]
+        public string FirstName { get; set; }
+
+        [JsonProperty("last_name")]
+        public string LastName { get; set; }
+
+        [JsonProperty("address")]
+        public StripeAddress Address { get; set; }
+
+        [JsonProperty("business_tax_id")]
+        public string BusinessTaxId { get; set; }
+
+        [JsonProperty("business_vat_id")]
+        public string BusinessVatId { get; set; }
+
+        [JsonProperty("dob")]
+        public StripeBirthDay BirthDay { get; set; }
+
+        [JsonProperty("ssn_last_4")]
+        public string SSN4 { get; set; }
+    }
+}

@@ -14,6 +14,9 @@ namespace Stripe
         [JsonProperty("customer")]
         public string CustomerId { get; set; }
 
+        [JsonProperty("source")]
+        public string Source { get; set; }
+
         [JsonProperty("card")]
         public string CardId { get; set; }
 
@@ -37,5 +40,8 @@ namespace Stripe
 
         [JsonProperty("application_fee")]
         public int? ApplicationFee { get; set; }
+
+        [JsonProperty("destination")]
+        public string Destination { get; set; }
     }
 }

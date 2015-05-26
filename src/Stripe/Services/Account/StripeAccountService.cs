@@ -2,7 +2,9 @@
 {
     public class StripeAccountService : StripeService
     {
-        public StripeAccountService(string apiKey = null) : base(apiKey) { }
+        public StripeAccountService(string apiKey = null) : base(apiKey)
+        {
+        }
 
         public virtual StripeAccount Get()
         {
