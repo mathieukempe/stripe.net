@@ -116,5 +116,10 @@
         {
             get { return "https://connect.stripe.com"; }
         }
+
+        public static string Uploads
+        {
+            get { return "https://uploads.stripe.com/v1/files"; }
+        }
     }
 }

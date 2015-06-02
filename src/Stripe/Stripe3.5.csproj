@@ -73,6 +73,7 @@
     <Compile Include="Constants\StripeRefundReasons.cs" />
     <Compile Include="Constants\StripeTransferFailureCodes.cs" />
     <Compile Include="Entities\StripeBirthDay.cs" />
+    <Compile Include="Entities\StripeDocument.cs" />
     <Compile Include="Entities\StripeTransferScheduleEntity.cs" />
     <Compile Include="Entities\StripeAddress.cs" />
     <Compile Include="Entities\StripeBalanceTransaction.cs" />
@@ -88,7 +89,9 @@
     <Compile Include="Entities\StripeTosAcceptanceEntity.cs" />
     <Compile Include="Entities\StripeTransferReversal.cs" />
     <Compile Include="Entities\StripeVerification.cs" />
+    <Compile Include="Infrastructure\DictionaryExtensions.cs" />
     <Compile Include="Infrastructure\ExpandableProperty.cs" />
+    <Compile Include="Infrastructure\FileInfoExtensions.cs" />
     <Compile Include="Services\Account\StripeAccountCreateOptions.cs" />
     <Compile Include="Services\Account\StripeAccountsService.cs" />
     <Compile Include="Services\Account\StripeAccountUpdateOptions.cs" />
