@@ -7,14 +7,20 @@ namespace Stripe
         [JsonProperty("business_name")]
         public string BusinessName { get; set; }
 
+        //[JsonProperty("bank_account")]
+        //public string BankAccount { get; set; }
+
         [JsonProperty("bank_account")]
-        public string BankAccount { get; set; }
+        public StripeBankAccountOptions BankAccount { get; set; }
 
         [JsonProperty("default_currency")]
         public string DefaultCurrency { get; set; }
 
         [JsonProperty("statement_descriptor")]
         public string StatementDescriptor { get; set; }
+
+        [JsonProperty("support_phone")]
+        public string SupportPhone { get; set; }
 
         [JsonProperty("legal_entity[type]")]
         public string LegalEntityType { get; set; }
