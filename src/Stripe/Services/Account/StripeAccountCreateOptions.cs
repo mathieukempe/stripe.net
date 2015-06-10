@@ -70,9 +70,12 @@ namespace Stripe
         [JsonProperty("legal_entity[ssn_last_4]")]
         public int? SSN4 { get; set; }
 
-        [JsonProperty("legal_entity[business_tax_id]")]
-        public int? LegalEntityBusinessTaxId { get; set; }
+        [JsonProperty("legal_entity[personal_id_number]")]
+        public string LegalEntityPersonalIdNumber { get; set; }
 
+        [JsonProperty("legal_entity[business_tax_id]")]
+        public string LegalEntityBusinessTaxId { get; set; }
+        
         [JsonProperty("debit_negative_balances")]
         public bool DebitNegativeBalances { get; set; }
 
@@ -81,7 +84,25 @@ namespace Stripe
 
         [JsonProperty("transfer_schedule[interval]")]
         public string TransferScheduleInterval { get; set; }
+        
+        [JsonProperty("personal_address[address][line1]")]
+        public string PersonalAddressLine1 { get; set; }
 
+        [JsonProperty("personal_address[address][line2]")]
+        public string PersonalAddressLine2 { get; set; }
+
+        [JsonProperty("personal_address[address][city]")]
+        public string PersonalAddressCity { get; set; }
+
+        [JsonProperty("personal_address[address][state]")]
+        public string PersonalAddressState { get; set; }
+
+        [JsonProperty("personal_address[address][postal_code]")]
+        public string PersonalAddressPostalCode { get; set; }
+
+        [JsonProperty("personal_address[address][country]")]
+        public string PersonalAddressCountry { get; set; }
+        
         [JsonProperty("tos_acceptance[date]")]
         public long TosAcceptanceDate { get; set; }
 
