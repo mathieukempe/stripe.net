@@ -14,7 +14,7 @@ namespace Stripe
         public string Email { get; set; }
 
         [JsonProperty("bank_account")]
-        public string BankAccount { get; set; }
+        public StripeBankAccountOptions BankAccount { get; set; }
 
         [JsonProperty("business_name")]
         public string BusinessName { get; set; }
@@ -84,23 +84,23 @@ namespace Stripe
 
         [JsonProperty("transfer_schedule[interval]")]
         public string TransferScheduleInterval { get; set; }
-        
-        [JsonProperty("personal_address[address][line1]")]
+
+        [JsonProperty("legal_entity[personal_address][line1]")]
         public string PersonalAddressLine1 { get; set; }
 
-        [JsonProperty("personal_address[address][line2]")]
+        [JsonProperty("legal_entity[personal_address][line2]")]
         public string PersonalAddressLine2 { get; set; }
 
-        [JsonProperty("personal_address[address][city]")]
+        [JsonProperty("legal_entity[personal_address][city]")]
         public string PersonalAddressCity { get; set; }
 
-        [JsonProperty("personal_address[address][state]")]
+        [JsonProperty("legal_entity[personal_address][state]")]
         public string PersonalAddressState { get; set; }
 
-        [JsonProperty("personal_address[address][postal_code]")]
+        [JsonProperty("legal_entity[personal_address][postal_code]")]
         public string PersonalAddressPostalCode { get; set; }
 
-        [JsonProperty("personal_address[address][country]")]
+        [JsonProperty("legal_entity[personal_address][country]")]
         public string PersonalAddressCountry { get; set; }
         
         [JsonProperty("tos_acceptance[date]")]

@@ -7,9 +7,6 @@ namespace Stripe
         [JsonProperty("business_name")]
         public string BusinessName { get; set; }
 
-        //[JsonProperty("bank_account")]
-        //public string BankAccount { get; set; }
-
         [JsonProperty("bank_account")]
         public StripeBankAccountOptions BankAccount { get; set; }
 
