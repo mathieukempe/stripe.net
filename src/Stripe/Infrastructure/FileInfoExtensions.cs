@@ -18,13 +18,14 @@ namespace Stripe
         /// Writes a file to a stream in multipart/form-data format.
         /// </summary>
         /// <param name="fileStream">The file that should be written.</param>
+        /// <param name="filename">The name of the file that should be written.</param>
         /// <param name="stream">The stream to which the file should be written.</param>
         /// <param name="mimeBoundary">The MIME multipart form boundary string.</param>
         /// <param name="mimeType">The MIME type of the file.</param>
         /// <param name="formKey">The name of the form parameter corresponding to the file upload.</param>        
-        public static void WriteMultipartFormData(this FileStream fileStream, Stream stream, string mimeBoundary, string mimeType, string formKey)
+        public static void WriteMultipartFormData(this Stream fileStream, string filename, Stream stream, string mimeBoundary, string mimeType, string formKey)
         {
-            string header = String.Format(HeaderTemplate, mimeBoundary, formKey, fileStream.Name, mimeType);
+            string header = String.Format(HeaderTemplate, mimeBoundary, formKey, filename, mimeType);
             byte[] headerbytes = Encoding.UTF8.GetBytes(header);
             stream.Write(headerbytes, 0, headerbytes.Length);
             

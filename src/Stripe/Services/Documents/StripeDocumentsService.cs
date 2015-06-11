@@ -20,35 +20,35 @@ namespace Stripe
 
             switch (extension)
             {
-                case "png":
+                case ".png":
                     return "image/png";
-                case "pdf":
+                case ".pdf":
                     return "application/pdf";
-                case "jpg":
+                case ".jpg":
                     return "image/jpeg";
-                case "jpeg":
+                case ".jpeg":
                     return "image/jpeg";
             }
 
             return "";
         }
 
-        public virtual StripeDocument UploadIdentityDocument(FileStream file)
+        public virtual StripeDocument UploadIdentityDocument(Stream file, string fileName)
         {
             var postData = new Dictionary<string, string>();
             postData.Add("purpose", "identity_document");
 
-            var response = Requestor.PostMultipartFormString(Urls.Uploads, postData, file, MimeType(file.Name), "file", ApiKey);
+            var response = Requestor.PostMultipartFormString(Urls.Uploads, postData, file, fileName, MimeType(fileName), "file", ApiKey);
 
             return Mapper<StripeDocument>.MapFromJson(response);
         }
 
-        public virtual StripeDocument UploadDisputeEvidence(FileStream file)
+        public virtual StripeDocument UploadDisputeEvidence(Stream file, string fileName)
         {
             var postData = new Dictionary<string, string>();
             postData.Add("purpose", "dispute_evidence");
 
-            var response = Requestor.PostMultipartFormString(Urls.Uploads, postData, file, MimeType(file.Name), "file", ApiKey);
+            var response = Requestor.PostMultipartFormString(Urls.Uploads, postData, file, fileName, MimeType(fileName), "file", ApiKey);
 
             return Mapper<StripeDocument>.MapFromJson(response);
         }

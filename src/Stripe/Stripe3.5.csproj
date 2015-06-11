@@ -96,6 +96,7 @@
     <Compile Include="Services\Account\StripeAccountsService.cs" />
     <Compile Include="Services\Account\StripeAccountUpdateOptions.cs" />
     <Compile Include="Services\Balance\StripeBalanceTransactionListOptions.cs" />
+    <Compile Include="Services\Documents\StripeDocumentsService.cs" />
     <Compile Include="Services\Refunds\StripeRefundCreateOptions.cs" />
     <Compile Include="Services\Refunds\StripeRefundService.cs" />
     <Compile Include="Services\Refunds\StripeRefundUpdateOptions.cs" />

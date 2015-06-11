@@ -105,20 +105,22 @@ namespace Stripe
         }
 
         public static string PostMultipartFormString(string url, Dictionary<string, string> postData,
-         FileStream fileToUpload,
+         Stream fileToUpload,
+         string fileName,
          string fileMimeType,
          string fileFormKey,
          string apiKey = null)
         {
             var wr = GetWebRequest(url, "POST", apiKey);
 
-            return ExecuteMultipartFormPostRequest((HttpWebRequest)wr, postData, fileToUpload, fileMimeType, fileFormKey, apiKey);
+            return ExecuteMultipartFormPostRequest((HttpWebRequest)wr, postData, fileToUpload, fileName, fileMimeType, fileFormKey, apiKey);
         }
 
         internal static string ExecuteMultipartFormPostRequest(
           HttpWebRequest webRequest,
           Dictionary<string, string> postData,
-          FileStream fileToUpload,
+          Stream fileToUpload,
+          string fileNameToUpload,
           string fileMimeType,
           string fileFormKey, string apiKey = null)
         {
@@ -133,7 +135,7 @@ namespace Stripe
             postData.WriteMultipartFormData(requestStream, boundary);
             if (fileToUpload != null)
             {
-                fileToUpload.WriteMultipartFormData(requestStream, boundary, fileMimeType, fileFormKey);
+                fileToUpload.WriteMultipartFormData(fileNameToUpload, requestStream, boundary, fileMimeType, fileFormKey);
             }
             byte[] endBytes = Encoding.UTF8.GetBytes("--" + boundary + "--");
             requestStream.Write(endBytes, 0, endBytes.Length);
