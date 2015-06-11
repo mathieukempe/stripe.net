@@ -111,5 +111,8 @@ namespace Stripe
 
         [JsonProperty("tos_acceptance[ip]")]
         public string TosAcceptanceIp { get; set; }
+
+        [JsonProperty("legal_entity[verification][document]")]
+        public string LegalEntityVerificationDocument { get; set; }
     }
 }
