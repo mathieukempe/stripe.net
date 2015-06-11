@@ -10,6 +10,9 @@ namespace Stripe
         [JsonProperty("bank_account")]
         public StripeBankAccountOptions BankAccount { get; set; }
 
+        [JsonProperty("product_description")]
+        public string ProductDescription { get; set; }
+
         [JsonProperty("default_currency")]
         public string DefaultCurrency { get; set; }
 
