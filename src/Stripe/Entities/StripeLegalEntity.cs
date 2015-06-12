@@ -20,11 +20,17 @@ namespace Stripe
         [JsonProperty("address")]
         public StripeAddress Address { get; set; }
 
+        [JsonProperty("personal_address")]
+        public StripeAddress PersonalAddress { get; set; }
+
         [JsonProperty("business_tax_id")]
         public string BusinessTaxId { get; set; }
 
         [JsonProperty("business_vat_id")]
         public string BusinessVatId { get; set; }
+
+        [JsonProperty("business_url")]
+        public string BusinessUrl { get; set; }
 
         [JsonProperty("dob")]
         public StripeBirthDay BirthDay { get; set; }
