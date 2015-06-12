@@ -50,6 +50,9 @@ namespace Stripe
         [JsonProperty("legal_entity")]
         public StripeLegalEntity LegalEntity { get; set; }
 
+        [JsonProperty("decline_charge_on")]
+        public StripeDeclineChargeOn DeclineChargeOn { get; set; }
+
         [JsonProperty("support_phone")]
         public string SupportPhone { get; set; }
 

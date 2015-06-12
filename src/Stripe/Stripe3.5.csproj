@@ -74,6 +74,7 @@
     <Compile Include="Constants\StripeTransferFailureCodes.cs" />
     <Compile Include="Entities\StripeAccountVerification.cs" />
     <Compile Include="Entities\StripeBirthDay.cs" />
+    <Compile Include="Entities\StripeDeclineChargeOn.cs" />
     <Compile Include="Entities\StripeDocument.cs" />
     <Compile Include="Entities\StripeTransferScheduleEntity.cs" />
     <Compile Include="Entities\StripeAddress.cs" />

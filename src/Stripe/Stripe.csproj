@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="Entities\StripeAddress.cs" />
     <Compile Include="Entities\StripeBirthDay.cs" />
+    <Compile Include="Entities\StripeDeclineChargeOn.cs" />
     <Compile Include="Entities\StripeDocument.cs" />
     <Compile Include="Entities\StripeLegalEntity.cs" />
     <Compile Include="Entities\StripeList.cs" />
