@@ -52,7 +52,7 @@ namespace Stripe
 
         [JsonProperty("product_description")]
         public string ProductDescription { get; set; }
-
+        
         [JsonProperty("transfer_schedule")]
         public StripeTransferScheduleEntity TransferSchedule { get; set; }
 
