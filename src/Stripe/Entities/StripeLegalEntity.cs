@@ -29,9 +29,6 @@ namespace Stripe
         [JsonProperty("business_vat_id")]
         public string BusinessVatId { get; set; }
 
-        [JsonProperty("business_url")]
-        public string BusinessUrl { get; set; }
-
         [JsonProperty("dob")]
         public StripeBirthDay BirthDay { get; set; }
 

@@ -44,6 +44,9 @@ namespace Stripe
         [JsonProperty("bank_accounts")]
         public StripeList<StripeRecipientActiveAccount> BankAccounts { get; set; }
 
+        [JsonProperty("business_url")]
+        public string BusinessUrl { get; set; }
+
         [JsonProperty("legal_entity")]
         public StripeLegalEntity LegalEntity { get; set; }
 
