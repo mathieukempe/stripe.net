@@ -68,7 +68,7 @@
     <Compile Include="Entities\StripeTransferReversal.cs" />
     <Compile Include="Constants\StripeRefundReasons.cs" />
     <Compile Include="Entities\StripeTransferScheduleEntity.cs" />
-    <Compile Include="Entities\StripeVerification.cs" />
+    <Compile Include="Entities\StripeAccountVerification.cs" />
     <Compile Include="Infrastructure\ExpandableProperty.cs" />
     <Compile Include="Infrastructure\FileInfoExtensions.cs" />
     <Compile Include="Infrastructure\DictionaryExtensions.cs" />

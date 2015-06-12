@@ -31,5 +31,8 @@ namespace Stripe
 
         [JsonProperty("ssn_last_4")]
         public string SSN4 { get; set; }
+
+        [JsonProperty("verification")]
+        public StripeLegalEntityVerification Verification { get; set; }
     }
 }

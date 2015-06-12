@@ -60,7 +60,7 @@ namespace Stripe
         public string BusinessName { get; set; }
 
         [JsonProperty("verification")]
-        public StripeVerification Verification { get; set; }
+        public StripeAccountVerification AccountVerification { get; set; }
 
         [JsonProperty("keys")]
         public StripeManagedAccountKeys Keys { get; set; }
