@@ -55,6 +55,12 @@ namespace Stripe
             }
         }
 
+        [JsonProperty("destination")]
+        public string Destination { get; set; }
+
+        [JsonProperty("destination_payment")]
+        public string DestinationPayment { get; set; }
+        
         [JsonProperty("description")]
         public string Description { get; set; }
 
