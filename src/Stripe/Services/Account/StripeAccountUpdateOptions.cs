@@ -4,9 +4,6 @@ namespace Stripe
 {
     public class StripeAccountUpdateOptions
     {
-        [JsonProperty("business_name")]
-        public string BusinessName { get; set; }
-
         [JsonProperty("bank_account")]
         public StripeBankAccountOptions BankAccount { get; set; }
 

@@ -16,9 +16,6 @@ namespace Stripe
         [JsonProperty("bank_account")]
         public StripeBankAccountOptions BankAccount { get; set; }
 
-        [JsonProperty("business_name")]
-        public string BusinessName { get; set; }
-
         [JsonProperty("product_description")]
         public string ProductDescription { get; set; }
 
