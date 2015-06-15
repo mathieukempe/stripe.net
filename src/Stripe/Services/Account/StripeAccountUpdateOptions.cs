@@ -93,5 +93,8 @@ namespace Stripe
 
         [JsonProperty("decline_charge_on[avs_failure]")]
         public bool DeclineChargeOnAvcFailure { get; set; }
+
+        [JsonProperty("legal_entity[business_tax_id]")]
+        public string LegalEntityBusinessTaxId { get; set; }
     }
 }
