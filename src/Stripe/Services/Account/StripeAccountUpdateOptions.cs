@@ -66,5 +66,8 @@ namespace Stripe
 
         [JsonProperty("legal_entity[ssn_last_4]")]
         public int? SSN4 { get; set; }
+
+        [JsonProperty("legal_entity[personal_id_number]")]
+        public string LegalEntityPersonalIdNumber { get; set; }
     }
 }
