@@ -69,5 +69,11 @@ namespace Stripe
 
         [JsonProperty("legal_entity[personal_id_number]")]
         public string LegalEntityPersonalIdNumber { get; set; }
+
+        [JsonProperty("decline_charge_on[cvc_failure]")]
+        public bool DeclineChargeOnCvcFailure { get; set; }
+
+        [JsonProperty("decline_charge_on[avs_failure]")]
+        public bool DeclineChargeOnAvcFailure { get; set; }
     }
 }

@@ -114,5 +114,12 @@ namespace Stripe
 
         [JsonProperty("legal_entity[verification][document]")]
         public string LegalEntityVerificationDocument { get; set; }
+
+        [JsonProperty("decline_charge_on[cvc_failure]")]
+        public bool DeclineChargeOnCvcFailure { get; set; }
+
+        [JsonProperty("decline_charge_on[avs_failure]")]
+        public bool DeclineChargeOnAvcFailure { get; set; }
+        
     }
 }
