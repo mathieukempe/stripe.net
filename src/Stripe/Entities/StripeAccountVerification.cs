@@ -15,7 +15,7 @@ namespace Stripe.Entities
 
         [JsonProperty("due_by")]
         [JsonConverter(typeof(StripeDateTimeConverter))]
-        public int DueBy { get; set; }
+        public DateTime? DueBy { get; set; }
     }
 
     public class StripeLegalEntityVerification
