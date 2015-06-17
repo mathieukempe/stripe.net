@@ -14,7 +14,15 @@ namespace Stripe
 
             return ExecuteWebRequest(wr);
         }
-       
+
+        public static string PostData(string url, string data, string apiKey = null)
+        {
+            var wr = GetWebRequest(url, "POST", apiKey, postData:data);
+
+            return ExecuteWebRequest(wr);
+        }
+
+
         public static string PostString(string url, string apiKey = null)
         {
             var wr = GetWebRequest(url, "POST", apiKey);
@@ -36,14 +44,14 @@ namespace Stripe
             return ExecuteWebRequest(wr);
         }
 
-        internal static WebRequest GetWebRequest(string url, string method, string apiKey = null, bool useBearer = false)
+        internal static WebRequest GetWebRequest(string url, string method, string apiKey = null, bool useBearer = false, string postData = "")
         {
             apiKey = apiKey ?? StripeConfiguration.GetApiKey();
 
             var request = (HttpWebRequest)WebRequest.Create(url);
             request.Method = method;
 
-            if(!useBearer)
+            if (!useBearer)
                 request.Headers.Add("Authorization", GetAuthorizationHeaderValue(apiKey));
             else
                 request.Headers.Add("Authorization", GetAuthorizationHeaderValueBearer(apiKey));
@@ -53,6 +61,17 @@ namespace Stripe
             request.ContentType = "application/x-www-form-urlencoded";
             request.UserAgent = "Stripe.net (https://github.com/jaymedavis/stripe.net)";
 
+            if (request.Method == "POST" && !string.IsNullOrEmpty(postData))
+            {
+                byte[] byteArray = Encoding.UTF8.GetBytes(postData);
+                request.ContentLength = byteArray.Length;
+                Stream dataStream = request.GetRequestStream();
+                // Write the data to the request stream.
+                dataStream.Write(byteArray, 0, byteArray.Length);
+                // Close the Stream object.
+                dataStream.Close();
+            }
+            
             return request;
         }
 
