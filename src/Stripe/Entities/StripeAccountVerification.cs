@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Security.Policy;
 using Newtonsoft.Json;
+using Stripe.Infrastructure;
 
 namespace Stripe.Entities
 {
@@ -13,7 +14,8 @@ namespace Stripe.Entities
         public string[] FieldsNeeded { get; set; }
 
         [JsonProperty("due_by")]
-        public DateTime? DueBy { get; set; }
+        [JsonConverter(typeof(StripeDateTimeConverter))]
+        public int DueBy { get; set; }
     }
 
     public class StripeLegalEntityVerification
