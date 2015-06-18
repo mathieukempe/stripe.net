@@ -69,7 +69,7 @@ namespace Stripe
         
         [JsonConverter(typeof(StripeDateTimeConverter))]
         [JsonProperty("due_by")]
-        public DateTime? DyeBy { get; set; }
+        public DateTime? DueBy { get; set; }
 
         [JsonProperty("past_due")]
         public bool PastDue { get; set; }
