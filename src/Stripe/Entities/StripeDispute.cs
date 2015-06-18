@@ -51,11 +51,11 @@ namespace Stripe
 
         // needs evidence object
         [JsonProperty("evidence_details")]
-        StripeDisputeEvidenceDetails EvidenceDetails { get; set; }
+        public StripeDisputeEvidenceDetails EvidenceDetails { get; set; }
 
         // needs evidence_details
         [JsonProperty("evidence")]
-        StripeDisputeEvidence Evidence { get; set; }
+        public StripeDisputeEvidence Evidence { get; set; }
 
         [JsonProperty("is_charge_refundable")]
         public bool IsChargeRefundable { get; set; }
@@ -69,7 +69,7 @@ namespace Stripe
         
         [JsonConverter(typeof(StripeDateTimeConverter))]
         [JsonProperty("due_by")]
-        public DateTime? DyeBy { get; set; }
+        public DateTime? DueBy { get; set; }
 
         [JsonProperty("past_due")]
         public bool PastDue { get; set; }
