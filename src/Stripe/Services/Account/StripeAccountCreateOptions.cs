@@ -86,7 +86,7 @@ namespace Stripe
         public string TransferScheduleInterval { get; set; }
 
         [JsonProperty("transfer_schedule[weekly_anchor]")]
-        public string TransferScheduleWeeklyInterval { get; set; }
+        public string TransferScheduleWeeklyAnchor { get; set; }
 
         [JsonProperty("legal_entity[personal_address][line1]")]
         public string PersonalAddressLine1 { get; set; }

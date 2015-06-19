@@ -26,6 +26,15 @@ namespace Stripe
         [JsonProperty("fingerprint")]
         public string Fingerprint { get; set; }
 
+        [JsonProperty("routing_number")]
+        public string RoutingNumber { get; set; }
+
+        [JsonProperty("account")]
+        public string Account { get; set; }
+
+        [JsonProperty("default_for_currency")]
+        public string DefaultForCurrency { get; set; }
+
         [JsonProperty("metadata")]
         public Dictionary<string, string> Metadata { get; set; }
     }
