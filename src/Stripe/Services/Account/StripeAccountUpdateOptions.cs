@@ -96,10 +96,10 @@ namespace Stripe
         public string LegalEntityPersonalIdNumber { get; set; }
 
         [JsonProperty("decline_charge_on[cvc_failure]")]
-        public bool DeclineChargeOnCvcFailure { get; set; }
+        public bool? DeclineChargeOnCvcFailure { get; set; }
 
         [JsonProperty("decline_charge_on[avs_failure]")]
-        public bool DeclineChargeOnAvcFailure { get; set; }
+        public bool? DeclineChargeOnAvcFailure { get; set; }
 
         [JsonProperty("legal_entity[business_tax_id]")]
         public string LegalEntityBusinessTaxId { get; set; }
