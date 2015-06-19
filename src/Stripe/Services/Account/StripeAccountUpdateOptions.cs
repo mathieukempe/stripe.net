@@ -25,6 +25,15 @@ namespace Stripe
         [JsonProperty("legal_entity[business_name]")]
         public string LegalEntityBusinessName { get; set; }
 
+        [JsonProperty("transfer_schedule[delay_days]")]
+        public int? TransferScheduleDelayDays { get; set; }
+
+        [JsonProperty("transfer_schedule[interval]")]
+        public string TransferScheduleInterval { get; set; }
+
+        [JsonProperty("transfer_schedule[weekly_anchor]")]
+        public string TransferScheduleWeeklyInterval { get; set; }
+
         [JsonProperty("legal_entity[address][line1]")]
         public string LegalEntityAddressLine1 { get; set; }
 
