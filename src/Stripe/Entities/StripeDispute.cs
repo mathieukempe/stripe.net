@@ -90,7 +90,7 @@ namespace Stripe
         [JsonProperty("customer_name")]
         public string CustomerName { get; set; }
 
-        [JsonProperty("customer_name")]
+        [JsonProperty("customer_email_address")]
         public string CustomerEmailAddress { get; set; }
 
         [JsonProperty("customer_purchase_ip")]
