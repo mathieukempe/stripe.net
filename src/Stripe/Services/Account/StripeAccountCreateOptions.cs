@@ -120,6 +120,136 @@ namespace Stripe
 
         [JsonProperty("decline_charge_on[avs_failure]")]
         public bool DeclineChargeOnAvcFailure { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners]")]
+        public string Owners { get; set; }
+
+        //Owner1
+        [JsonProperty("legal_entity[additional_owners][0][dob][day]")]
+        public int? OwnerOneLegalEntityDobDay { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][0][dob][month]")]
+        public int? OwnerOneLegalEntityDobMonth { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][0][dob][year]")]
+        public int? OwnerOneLegalEntityDobYear { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][0][first_name]")]
+        public string OwnerOneLegalEntityFirstName { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][0][last_name]")]
+        public string OwnerOneLegalEntityLastName { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][0][address][line1]")]
+        public string OwnerOneAddressLine1 { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][0][address][line2]")]
+        public string OwnerOneAddressLine2 { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][0][address][city]")]
+        public string OwnerOneAddressCity { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][0][address][state]")]
+        public string OwnerOneAddressState { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][0][address][postal_code]")]
+        public string OwnerOneAddressPostalCode { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][0][address][country]")]
+        public string OwnerOneAddressCountry { get; set; }
+
+        //Owner 2
+        [JsonProperty("legal_entity[additional_owners][1][dob][month]")]
+        public int? OwnerTwoLegalEntityDobMonth { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][1][dob][year]")]
+        public int? OwnerTwoLegalEntityDobYear { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][1][first_name]")]
+        public string OwnerTwoLegalEntityFirstName { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][1][last_name]")]
+        public string OwnerTwoLegalEntityLastName { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][1][address][line1]")]
+        public string OwnerTwoAddressLine1 { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][1][address][line2]")]
+        public string OwnerTwoAddressLine2 { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][1][address][city]")]
+        public string OwnerTwoAddressCity { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][1][address][state]")]
+        public string OwnerTwoAddressState { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][1][address][postal_code]")]
+        public string OwnerTwoAddressPostalCode { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][1][address][country]")]
+        public string OwnerTwoAddressCountry { get; set; }
+
+        //Owner 3 
+        [JsonProperty("legal_entity[additional_owners][2][dob][month]")]
+        public int? OwnerThreeLegalEntityDobMonth { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][2][dob][year]")]
+        public int? OwnerThreeLegalEntityDobYear { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][2][first_name]")]
+        public string OwnerThreeLegalEntityFirstName { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][2][last_name]")]
+        public string OwnerThreeLegalEntityLastName { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][2][address][line1]")]
+        public string OwnerThreeAddressLine1 { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][2][address][line2]")]
+        public string OwnerThreeAddressLine2 { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][2][address][city]")]
+        public string OwnerThreeAddressCity { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][2][address][state]")]
+        public string OwnerThreeAddressState { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][2][address][postal_code]")]
+        public string OwnerThreeAddressPostalCode { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][2][address][country]")]
+        public string OwnerThreeAddressCountry { get; set; }
+
+        //Owner 4 
+        [JsonProperty("legal_entity[additional_owners][3][dob][month]")]
+        public int? OwnerFourLegalEntityDobMonth { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][3][dob][year]")]
+        public int? OwnerFourLegalEntityDobYear { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][3][first_name]")]
+        public string OwnerFourLegalEntityFirstName { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][3][last_name]")]
+        public string OwnerFourLegalEntityLastName { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][3][address][line1]")]
+        public string OwnerFourAddressLine1 { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][3][address][line2]")]
+        public string OwnerFourAddressLine2 { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][3][address][city]")]
+        public string OwnerFourAddressCity { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][3][address][state]")]
+        public string OwnerFourAddressState { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][3][address][postal_code]")]
+        public string OwnerFourAddressPostalCode { get; set; }
+
+        [JsonProperty("legal_entity[additional_owners][3][address][country]")]
+        public string OwnerFourAddressCountry { get; set; }
         
     }
 }

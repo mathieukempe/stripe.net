@@ -105,13 +105,13 @@ namespace Stripe
         [JsonProperty("legal_entity[business_tax_id]")]
         public string LegalEntityBusinessTaxId { get; set; }
 
-        [JsonProperty("legal_entity[additional_owners][0][dob][day]")]
-        public int? OwnerOneLegalEntityDobDay { get; set; }
-
         [JsonProperty("legal_entity[additional_owners]")]
         public string Owners { get; set; }
 
         //Owner1
+        [JsonProperty("legal_entity[additional_owners][0][dob][day]")]
+        public int? OwnerOneLegalEntityDobDay { get; set; }
+        
         [JsonProperty("legal_entity[additional_owners][0][dob][month]")]
         public int? OwnerOneLegalEntityDobMonth { get; set; }
 
