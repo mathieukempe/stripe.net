@@ -226,38 +226,7 @@ namespace Stripe
         [JsonProperty("legal_entity[additional_owners][2][address][country]")]
         public string OwnerThreeAddressCountry { get; set; }
 
-        //Owner 4 
-        [JsonProperty("legal_entity[additional_owners][4][dob][day]")]
-        public int? OwnerFourLegalEntityDobDay { get; set; }
-        [JsonProperty("legal_entity[additional_owners][3][dob][month]")]
-        public int? OwnerFourLegalEntityDobMonth { get; set; }
-
-        [JsonProperty("legal_entity[additional_owners][3][dob][year]")]
-        public int? OwnerFourLegalEntityDobYear { get; set; }
-
-        [JsonProperty("legal_entity[additional_owners][3][first_name]")]
-        public string OwnerFourLegalEntityFirstName { get; set; }
-
-        [JsonProperty("legal_entity[additional_owners][3][last_name]")]
-        public string OwnerFourLegalEntityLastName { get; set; }
-
-        [JsonProperty("legal_entity[additional_owners][3][address][line1]")]
-        public string OwnerFourAddressLine1 { get; set; }
-
-        [JsonProperty("legal_entity[additional_owners][3][address][line2]")]
-        public string OwnerFourAddressLine2 { get; set; }
-
-        [JsonProperty("legal_entity[additional_owners][3][address][city]")]
-        public string OwnerFourAddressCity { get; set; }
-
-        [JsonProperty("legal_entity[additional_owners][3][address][state]")]
-        public string OwnerFourAddressState { get; set; }
-
-        [JsonProperty("legal_entity[additional_owners][3][address][postal_code]")]
-        public string OwnerFourAddressPostalCode { get; set; }
-
-        [JsonProperty("legal_entity[additional_owners][3][address][country]")]
-        public string OwnerFourAddressCountry { get; set; }
+        
         
     }
 }

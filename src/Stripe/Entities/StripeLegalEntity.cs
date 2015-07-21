@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 using Stripe.Entities;
 
 namespace Stripe
@@ -37,5 +38,23 @@ namespace Stripe
 
         [JsonProperty("verification")]
         public StripeLegalEntityVerification Verification { get; set; }
+
+        [JsonProperty("additional_owners")]
+        public IList<AdditionalOwner> AdditionalOwners { get; set; }
+    }
+
+    public class AdditionalOwner
+    {
+        [JsonProperty("dob")]
+        public StripeBirthDay Dob { get; set; }
+
+        [JsonProperty("first_name")]
+        public string FirstName { get; set; }
+
+        [JsonProperty("last_name")]
+        public string LastName { get; set; }
+
+        [JsonProperty("address")]
+        public StripeAddress Address { get; set; }        
     }
 }

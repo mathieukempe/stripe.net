@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 using Stripe.Entities;
 
 namespace Stripe
@@ -75,9 +76,9 @@ namespace Stripe
         public StripeAccountVerification AccountVerification { get; set; }
 
         [JsonProperty("keys")]
-        public StripeManagedAccountKeys Keys { get; set; }
+        public StripeManagedAccountKeys Keys { get; set; }        
     }
-
+    
     public class StripeManagedAccountKeys
     {
         [JsonProperty("secret")]
