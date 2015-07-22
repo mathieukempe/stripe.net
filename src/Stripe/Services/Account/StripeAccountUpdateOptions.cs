@@ -15,6 +15,9 @@ namespace Stripe
         [JsonProperty("default_currency")]
         public string DefaultCurrency { get; set; }
 
+        [JsonProperty("business_url")]
+        public string BusinessUrl { get; set; }
+
         [JsonProperty("statement_descriptor")]
         public string StatementDescriptor { get; set; }
 
