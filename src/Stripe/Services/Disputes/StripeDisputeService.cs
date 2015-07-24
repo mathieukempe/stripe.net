@@ -9,7 +9,7 @@
 
         public virtual StripeDispute Update(string chargeId, StripeDisputeEvidence evidence = null)
         {
-            var url = string.Format("{0}/dispute", chargeId);
+            var url = string.Format("{0}/{1}/dispute",Urls.Charges, chargeId);
 
             url = this.ApplyAllParameters(evidence, url, true);
             
@@ -20,7 +20,7 @@
 
         public virtual StripeDispute Close(string chargeId)
         {
-            var url = string.Format("{0}/dispute/close", chargeId);
+            var url = string.Format("{0}/{1}/dispute/close",Urls.Charges, chargeId);
             url = this.ApplyAllParameters(null, url, false);
 
             var response = Requestor.PostString(url, ApiKey);
