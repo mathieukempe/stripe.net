@@ -114,6 +114,7 @@ namespace Stripe
         [JsonProperty("statement_descriptor")]
         public string StatementDescriptor { get; set; }
 
+        [JsonProperty("transfer")]
         public string TransferId { get; set; }
 
         [JsonIgnore]
