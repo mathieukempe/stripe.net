@@ -7,7 +7,7 @@
         public bool ExpandCharge { get; set; }
         public bool ExpandBalanceTransaction { get; set; }
 
-        public virtual StripeDispute Update(string chargeId, StripeDisputeEvidence evidence = null)
+        public virtual StripeDispute Update(string chargeId, StripeDisputeUpdateOptions evidence = null)
         {
             var url = string.Format("{0}/{1}/dispute",Urls.Charges, chargeId);
 
