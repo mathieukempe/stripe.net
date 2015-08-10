@@ -18,6 +18,9 @@ namespace Stripe
         [JsonProperty("business_url")]
         public string BusinessUrl { get; set; }
 
+        [JsonProperty("email")]
+        public string Email { get; set; }
+
         [JsonProperty("statement_descriptor")]
         public string StatementDescriptor { get; set; }
 
