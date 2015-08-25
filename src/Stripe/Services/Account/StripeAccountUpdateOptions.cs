@@ -148,6 +148,9 @@ namespace Stripe
         [JsonProperty("legal_entity[additional_owners][0][address][country]")]
         public string OwnerOneAddressCountry { get; set; }
 
+        [JsonProperty("legal_entity[additional_owner][0][verification][document]")]
+        public string OwnerOneVerificationDocument { get; set; }
+
         //Owner 2
         [JsonProperty("legal_entity[additional_owners][1][dob][day]")]
         public int? OwnerTwoLegalEntityDobDay { get; set; }
@@ -181,6 +184,9 @@ namespace Stripe
 
         [JsonProperty("legal_entity[additional_owners][1][address][country]")]
         public string OwnerTwoAddressCountry { get; set; }
+
+        [JsonProperty("legal_entity[additional_owner][1][verification][document]")]
+        public string OwnerTwoVerificationDocument { get; set; }
         
         //Owner 3 
         [JsonProperty("legal_entity[additional_owners][2][dob][day]")]
@@ -215,6 +221,10 @@ namespace Stripe
 
         [JsonProperty("legal_entity[additional_owners][2][address][country]")]
         public string OwnerThreeAddressCountry { get; set; }        
+
+        [JsonProperty("legal_entity[additional_owner][2][verification][document]")]
+        public string OwnerThreeVerificationDocument { get; set; }
+        
     }
 
 
