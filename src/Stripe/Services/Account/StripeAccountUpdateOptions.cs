@@ -185,7 +185,7 @@ namespace Stripe
         [JsonProperty("legal_entity[additional_owners][1][address][country]")]
         public string OwnerTwoAddressCountry { get; set; }
 
-        [JsonProperty("legal_entity[additional_owner][1][verification][document]")]
+        [JsonProperty("legal_entity[additional_owners][1][verification][document]")]
         public string OwnerTwoVerificationDocument { get; set; }
         
         //Owner 3 
