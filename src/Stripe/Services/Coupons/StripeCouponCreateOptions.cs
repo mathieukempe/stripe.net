@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 using Stripe.Infrastructure;
 
@@ -28,6 +29,9 @@ namespace Stripe
         public int? MaxRedemptions { get; set; }
 
         public DateTime? RedeemBy { get; set; }
+
+        [JsonProperty("metadata")]
+        public Dictionary<string, string> Metadata { get; set; }
 
         [JsonProperty("redeem_by")]
         internal long? RedeemByInternal
