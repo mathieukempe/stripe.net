@@ -79,6 +79,7 @@
     <Compile Include="Services\Balance\StripeBalanceTransactionListOptions.cs" />
     <Compile Include="Services\Disputes\StripeDisputeUpdateOptions.cs" />
     <Compile Include="Services\Documents\StripeDocumentsService.cs" />
+    <Compile Include="Services\Invoices\StripeInvoiceLineListOptions.cs" />
     <Compile Include="Services\Refunds\StripeRefundCreateOptions.cs" />
     <Compile Include="Services\Refunds\StripeRefundService.cs" />
     <Compile Include="Services\Refunds\StripeRefundUpdateOptions.cs" />

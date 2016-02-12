@@ -53,6 +53,16 @@ namespace Stripe
             return Mapper<StripeInvoice>.MapFromJson(response);
         }
 
+        public virtual IEnumerable<StripeInvoiceLineItem> Lines(string invoiceId, StripeInvoiceLineListOptions listOptions = null)
+        {
+            var url = string.Format("{0}/{1}/lines", Urls.Invoices, invoiceId);
+            url = this.ApplyAllParameters(listOptions, url, true);
+
+            var response = Requestor.GetString(url, ApiKey);
+
+            return Mapper<StripeInvoiceLineItem>.MapCollectionFromJson(response);
+        }
+
         public virtual IEnumerable<StripeInvoice> List(StripeInvoiceListOptions listOptions = null)
         {
             var url = Urls.Invoices;
