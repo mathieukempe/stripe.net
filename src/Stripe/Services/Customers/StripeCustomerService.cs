@@ -44,6 +44,13 @@ namespace Stripe
             Requestor.Delete(url, ApiKey);
         }
 
+        public virtual void DeleteDiscount(string customerId)
+        {
+            var url = string.Format(Urls.CustomerDiscount, customerId);
+
+            Requestor.Delete(url, ApiKey);
+        }
+
         public virtual IEnumerable<StripeCustomer> List(StripeCustomerListOptions listOptions = null)
         {
             var url = Urls.Customers;
