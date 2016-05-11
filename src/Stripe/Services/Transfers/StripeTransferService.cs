@@ -48,10 +48,10 @@ namespace Stripe
             return Mapper<StripeTransfer>.MapFromJson(response);
         }
 
-        public virtual StripeTransferReversal Reverse(string transferId)
+        public virtual StripeTransferReversal Reverse(string transferId, StripeTransferReverseOptions reverseOptions)
         {
             var url = string.Format("{0}/{1}/reversals", Urls.Transfers, transferId);
-            url = this.ApplyAllParameters(null, url, false);
+            url = this.ApplyAllParameters(reverseOptions, url, false);
 
             var response = Requestor.PostString(url, ApiKey);
 

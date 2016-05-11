@@ -165,6 +165,7 @@
     <Compile Include="Infrastructure\Urls.cs" />
     <Compile Include="Infrastructure\ParameterBuilder.cs" />
     <Compile Include="Infrastructure\Requestor.cs" />
+    <Compile Include="Services\Transfers\StripeTransferReverseOptions.cs" />
     <Compile Include="Services\Transfers\StripeTransferUpdateOptions.cs" />
     <Compile Include="Services\Transfers\StripeTransferListOptions.cs" />
     <Compile Include="Services\Transfers\StripeTransferCreateOptions.cs" />
