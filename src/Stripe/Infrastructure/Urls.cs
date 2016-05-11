@@ -57,6 +57,11 @@
             get { return BaseUrl + "/customers/{0}/cards"; }
         }
 
+        public static string CustomerDiscount
+        {
+            get { return BaseUrl + "/customers/{0}/discount"; }
+        }
+
         public static string RecipientCards
         {
             get { return BaseUrl + "/recipients/{0}/cards"; }
