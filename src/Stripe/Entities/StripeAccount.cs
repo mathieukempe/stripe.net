@@ -72,6 +72,12 @@ namespace Stripe
         [JsonProperty("business_name")]
         public string BusinessName { get; set; }
 
+        [JsonProperty("business_name_kana")]
+        public string BusinessNameKana { get; set; }
+
+        [JsonProperty("business_name_kanji")]
+        public string BusinessNameKanji { get; set; }
+
         [JsonProperty("verification")]
         public StripeAccountVerification AccountVerification { get; set; }
 
