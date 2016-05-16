@@ -13,6 +13,9 @@ namespace Stripe
         [JsonProperty("city")]
         public string City { get; set; }
 
+        [JsonProperty("town")]
+        public string Town { get; set; }
+
         [JsonProperty("state")]
         public string State { get; set; }
 
