@@ -150,8 +150,20 @@ namespace Stripe
         [JsonProperty("legal_entity[personal_address][line2]")]
         public string PersonalAddressLine2 { get; set; }
 
+        [JsonProperty("legal_entity[personal_address_kana][line2]")]
+        public string PersonalAddressKanaLine2 { get; set; }
+
+        [JsonProperty("legal_entity[personal_address][line2]")]
+        public string PersonalAddressKanjiLine2 { get; set; }
+
         [JsonProperty("legal_entity[personal_address][city]")]
         public string PersonalAddressCity { get; set; }
+
+        [JsonProperty("legal_entity[personal_address_kana][city]")]
+        public string PersonalAddressKanaCity { get; set; }
+
+        [JsonProperty("legal_entity[personal_address_kanji][city]")]
+        public string PersonalAddressKanjiCity { get; set; }
 
         [JsonProperty("legal_entity[personal_address][state]")]
         public string PersonalAddressState { get; set; }
