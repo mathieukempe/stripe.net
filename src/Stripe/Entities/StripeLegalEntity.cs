@@ -21,6 +21,9 @@ namespace Stripe
         [JsonProperty("business_name_kanji")]
         public string BusinessNameKanji { get; set; }
 
+        [JsonProperty("maiden_name")]
+        public string MaidenName { get; set; }
+
         [JsonProperty("first_name")]
         public string FirstName { get; set; }
 
@@ -32,7 +35,7 @@ namespace Stripe
 
         [JsonProperty("last_name")]
         public string LastName { get; set; }
-
+        
         [JsonProperty("last_name_kana")]
         public string LastNameKana { get; set; }
 

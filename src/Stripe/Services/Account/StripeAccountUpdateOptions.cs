@@ -66,6 +66,12 @@ namespace Stripe
         [JsonProperty("legal_entity[address][line2]")]
         public string LegalEntityAddressLine2 { get; set; }
 
+        [JsonProperty("legal_entity[address_kana][line2]")]
+        public string LegalEntityAddressKanaLine2 { get; set; }
+
+        [JsonProperty("legal_entity[address_kanji][line2]")]
+        public string LegalEntityAddressKanjiLine2 { get; set; }
+
         [JsonProperty("legal_entity[address_kanji][town]")]
         public string LegalEntityAddressKanjiTown { get; set; }
 
@@ -111,9 +117,12 @@ namespace Stripe
         [JsonProperty("legal_entity[dob][year]")]
         public int? LegalEntityDobYear { get; set; }
 
+        [JsonProperty("legal_entity[maiden_name]")]
+        public string LegalEntityMaidenName { get; set; }
+
         [JsonProperty("legal_entity[first_name]")]
         public string LegalEntityFirstName { get; set; }
-
+        
         [JsonProperty("legal_entity[first_name_kana]")]
         public string LegalEntityFirstNameKana { get; set; }
 
@@ -182,6 +191,9 @@ namespace Stripe
 
         [JsonProperty("legal_entity[business_tax_id]")]
         public string LegalEntityBusinessTaxId { get; set; }
+
+        [JsonProperty("legal_entity[business_vat_id]")]
+        public string LegalEntityBusinessVatId { get; set; }
 
         [JsonProperty("legal_entity[additional_owners]")]
         public string Owners { get; set; }
