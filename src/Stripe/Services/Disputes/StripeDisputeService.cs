@@ -10,10 +10,13 @@
         public virtual StripeDispute Update(string chargeId, StripeDisputeUpdateOptions evidence = null)
         {
             var url = string.Format("{0}/{1}/dispute",Urls.Charges, chargeId);
-
-            url = this.ApplyAllParameters(evidence, url, true);
             
-            var response = Requestor.PostString(url, ApiKey);
+            var postData = this.ApplyAllParameters(evidence, "", false);
+
+            //remove the ?
+            postData = RemoveQuestionMark(postData);
+
+            var response = Requestor.PostData(url, postData, ApiKey);
 
             return Mapper<StripeDispute>.MapFromJson(response);
         }
@@ -26,6 +29,16 @@
             var response = Requestor.PostString(url, ApiKey);
 
             return Mapper<StripeDispute>.MapFromJson(response);
+        }
+
+        private static string RemoveQuestionMark(string source)
+        {
+            int index = source.IndexOf("?");
+            string clean = (index < 0)
+                ? source
+                : source.Remove(index, "?".Length);
+
+            return clean;
         }
     }
 }
