@@ -156,6 +156,12 @@ namespace Stripe
         [JsonProperty("legal_entity[personal_address][line2]")]
         public string PersonalAddressKanjiLine2 { get; set; }
 
+        [JsonProperty("legal_entity[personal_address_kanji][town]")]
+        public string PersonalAddressKanjiTown { get; set; }
+
+        [JsonProperty("legal_entity[personal_address_kana][town]")]
+        public string PersonalAddressKanaTown { get; set; }
+
         [JsonProperty("legal_entity[personal_address][city]")]
         public string PersonalAddressCity { get; set; }
 
