@@ -100,6 +100,12 @@ namespace Stripe
         [JsonProperty("legal_entity[address][country]")]
         public string LegalEntityAddressCountry { get; set; }
 
+        [JsonProperty("legal_entity[address_kana][country]")]
+        public string LegalEntityAddressKanaCountry { get; set; }
+
+        [JsonProperty("legal_entity[address_kanji][country]")]
+        public string LegalEntityAddressKanjiCountry { get; set; }
+
         [JsonProperty("legal_entity[dob][day]")]
         public int? LegalEntityDobDay { get; set; }
 
@@ -210,7 +216,13 @@ namespace Stripe
 
         [JsonProperty("legal_entity[personal_address][country]")]
         public string PersonalAddressCountry { get; set; }
-        
+
+        [JsonProperty("legal_entity[personal_address_kana][country]")]
+        public string PersonalAddressKanaCountry { get; set; }
+
+        [JsonProperty("legal_entity[personal_address_kanji][country]")]
+        public string PersonalAddressKanjiCountry { get; set; }
+
         [JsonProperty("tos_acceptance[date]")]
         public long TosAcceptanceDate { get; set; }
 
