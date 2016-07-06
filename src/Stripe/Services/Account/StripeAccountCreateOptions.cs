@@ -37,6 +37,9 @@ namespace Stripe
         [JsonProperty("legal_entity[gender]")]
         public string LegalEntityGender { get; set; }
 
+        [JsonProperty("legal_entity[phone_number]")]
+        public string LegalEntityPhoneNumber { get; set; }
+
         [JsonProperty("legal_entity[business_name]")]
         public string LegalEntityBusinessName { get; set; }
 

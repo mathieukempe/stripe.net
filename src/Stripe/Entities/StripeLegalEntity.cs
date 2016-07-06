@@ -12,6 +12,9 @@ namespace Stripe
         [JsonProperty("gender")]
         public string Gender { get; set; }
 
+        [JsonProperty("phone_number")]
+        public string PhoneNumber { get; set; }
+
         [JsonProperty("business_name")]
         public string BusinessName { get; set; }
 
